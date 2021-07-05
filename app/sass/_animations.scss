@@ -1,4 +1,7 @@
 // animation: name duration timing-function delay interaction-count direction ;
+.has-fade {
+  visibility: hidden;
+}
 
 @keyframes fade-in {
   from {
@@ -12,12 +15,12 @@
   }
 
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
-
 .fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
+  animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -36,7 +39,6 @@
     opacity: 0;
   }
 }
-
 .fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
 }

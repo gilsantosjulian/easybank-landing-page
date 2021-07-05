@@ -19,6 +19,8 @@
 
   nav {
     // padding: 1.0625rem 1.5rem; // 17px 24px;
+    position: relative;
+    background-color: $white;
     padding-top: 1.0625rem;
     padding-bottom: 1.0625rem;
   }
@@ -33,10 +35,9 @@
   }
 
   .overlay {
-    display: block;
     opacity: 0;
     position: fixed;
-    top: 3.75rem; // 60px / 16px(default)
+    top: 0; // 60px / 16px(default)
     bottom: 0;
     left: 0;
     right: 0;
