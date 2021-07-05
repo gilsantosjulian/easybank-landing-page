@@ -1,6 +1,7 @@
 const btnHamburguer = document.querySelector('#btnHamburguer')
 const header = document.querySelector('.header')
 const overlay = document.querySelector('.overlay')
+const fadeElems = document.querySelectorAll('.has-fade')
 
 btnHamburguer.addEventListener('click', handleChange)
 
@@ -8,12 +9,16 @@ function handleChange () {
   console.log('open hamburguer');
   if(header.classList.contains('open')) { // Close hamburguer menu
     header.classList.remove('open')
-    overlay.classList.remove('fade-in')
-    overlay.classList.add('fade-out')
+    fadeElems.forEach((element) => {
+      element.classList.remove('fade-in')
+      element.classList.add('fade-out')
+    }) 
   }
   else { // Open hamburguer menu
     header.classList.add('open')
-    overlay.classList.remove('fade-out')
-    overlay.classList.add('fade-in')
+    fadeElems.forEach((element) => {
+      element.classList.remove('fade-out')
+      element.classList.add('fade-in')
+    }) 
   }
 }
