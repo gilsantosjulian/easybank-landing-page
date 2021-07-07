@@ -15,6 +15,10 @@ body {
   color: $grayishBlue;
   font-size: $font-med;
   font-weight: 300;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a, a:visited, a:hover {
