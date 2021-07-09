@@ -69,10 +69,50 @@ a, a:visited, a:hover {
 }
 
 .container {
-  padding-top: 2.25rem;
-  padding-left: 1.5rem;
-  padding-bottom: 2.25rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+.container--pall {
+  padding-top: 4.375rem;
   padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -94,6 +134,10 @@ button, .button {
   cursor: pointer;
   color: white;
   font-weight: 400;
+  font-size: 0.875rem;
+}
+button:hover, .button:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 63.9375em) {
@@ -202,16 +246,13 @@ button, .button {
   transition: opacity 300ms ease-in-out;
   border-radius: 100px;
 }
-.header__cta {
-  font-size: 0.875rem;
-  color: white;
-  opacity: 0.75;
-  transition: opacity 300ms ease-in-out;
-}
-.header__cta:hover {
-  opacity: 1;
-}
 
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
@@ -232,6 +273,15 @@ button, .button {
   background-repeat: no-repeat;
   background-position: center bottom;
 }
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 3;
+    order: 2;
+    height: 41rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
+}
 .hero__text {
   text-align: center;
 }
@@ -246,6 +296,13 @@ button, .button {
   line-height: 1.5;
   margin-bottom: 2.25rem;
 }
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 2;
+    order: 1;
+  }
+}
+
 @media (min-width: 40em) {
   .feature__grid {
     display: flex;
