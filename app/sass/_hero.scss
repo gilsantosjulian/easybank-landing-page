@@ -1,4 +1,9 @@
 .hero {
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: center;
+  }
+
 
   &__image {
     position: relative;
@@ -20,6 +25,14 @@
       background-repeat: no-repeat;
       background-position: center bottom;
     }
+
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 2;
+      height: 41rem; // 655/16
+      background-image: url('/images/bg-intro-desktop.svg');
+      background-position: left center;
+    }
   }
 
   &__text {
@@ -38,8 +51,9 @@
       margin-bottom: 2.25rem;
     }
 
-    a {
-      
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 1;
     }
   }
 
