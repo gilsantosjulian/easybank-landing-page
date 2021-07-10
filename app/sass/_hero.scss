@@ -1,9 +1,12 @@
 .hero {
-  @include breakpoint-up(large) {
-    display: flex;
-    align-items: center;
-  }
+  background-color: $veryLightGray;
 
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   &__image {
     position: relative;
@@ -14,12 +17,21 @@
     min-height: 17.5rem; // 280/16
 
     &::before {
-      position: absolute;
       content: '';
+      position: absolute;
       height: 100%;
-      width: 92%;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;
+      background-image: url('/images/bg-intro-desktop.svg');
+      background-size: 93%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
       background-image: url('/images/image-mockups.png');
       background-size: 93%;
       background-repeat: no-repeat;
@@ -44,6 +56,10 @@
       line-height: 1.15;
       color: $darkBlue;
       margin-bottom: 1.5rem; // 24/16
+
+      @include breakpoint-up(large) {
+        font-size: $font-xlg;
+      }
     }
 
     p {
@@ -54,6 +70,7 @@
     @include breakpoint-up(large) {
       flex: 2;
       order: 1;
+      text-align: left;
     }
   }
 
