@@ -59,6 +59,11 @@ body {
 body.noscroll {
   overflow: hidden;
 }
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
 
 h1, h2, h3 {
   margin-top: 0px;
@@ -247,8 +252,11 @@ button:hover, .button:hover {
   border-radius: 100px;
 }
 
+.hero {
+  background-color: #fafafa;
+}
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: flex;
     align-items: center;
   }
@@ -262,12 +270,20 @@ button:hover, .button:hover {
   min-height: 17.5rem;
 }
 .hero__image::before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 100%;
-  width: 92%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  background-image: url("/images/bg-intro-desktop.svg");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.hero__image::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background-image: url("/images/image-mockups.png");
   background-size: 93%;
   background-repeat: no-repeat;
@@ -292,6 +308,11 @@ button:hover, .button:hover {
   color: #2d314d;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
+}
 .hero__text p {
   line-height: 1.5;
   margin-bottom: 2.25rem;
@@ -300,6 +321,7 @@ button:hover, .button:hover {
   .hero__text {
     flex: 2;
     order: 1;
+    text-align: left;
   }
 }
 
