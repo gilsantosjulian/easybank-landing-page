@@ -1,5 +1,11 @@
 .feature {
 
+  &__intro {
+    @include breakpoint-up(large) {
+      width: 60%;
+    }
+  }
+
   &__grid {
    @include breakpoint-up(medium) {
      display: flex;
@@ -9,10 +15,13 @@
   
   &__item {
     border: 1px solid magenta;
-    padding: 0.9373rem;
+    padding: 0.9375rem; // 15/16
 
     @include breakpoint-up(medium) {
-      flex: 0 0 50%;
+      // flex: 0 0 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 50%;
     }
 
     @include breakpoint-up(large) {
