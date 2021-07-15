@@ -67,6 +67,35 @@ body.noscroll {
 
 h1, h2, h3 {
   margin-top: 0px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+}
+
+h1 {
+  font-size: 2.3125rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
 }
 
 a, a:visited, a:hover {
@@ -327,22 +356,6 @@ button:hover, .button:hover {
 .hero__text {
   text-align: center;
 }
-.hero__text h1 {
-  font-weight: 300;
-  font-size: 2.3125rem;
-  line-height: 1.15;
-  color: #2d314d;
-  margin-bottom: 1.5rem;
-}
-@media (min-width: 64em) {
-  .hero__text h1 {
-    font-size: 3.25rem;
-  }
-}
-.hero__text p {
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-}
 @media (min-width: 64em) {
   .hero__text {
     flex: 2;
@@ -351,6 +364,11 @@ button:hover, .button:hover {
   }
 }
 
+@media (min-width: 64em) {
+  .feature__intro {
+    width: 60%;
+  }
+}
 @media (min-width: 40em) {
   .feature__grid {
     display: flex;
@@ -359,11 +377,13 @@ button:hover, .button:hover {
 }
 .feature__item {
   border: 1px solid magenta;
-  padding: 0.9373rem;
+  padding: 0.9375rem;
 }
 @media (min-width: 40em) {
   .feature__item {
-    flex: 0 0 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
   }
 }
 @media (min-width: 64em) {
