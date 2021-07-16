@@ -15,6 +15,7 @@ body {
   color: $grayishBlue;
   font-size: $font-med;
   font-weight: 300;
+  min-height: 200vh;
 
   &.noscroll {
     overflow: hidden;
@@ -71,10 +72,10 @@ a, a:visited, a:hover {
     padding-bottom: 4.375rem;
     padding-left: 1.5rem;
 
-    // @include breakpoint-up(large) {
-    //   padding-top: 6rem;
-    //   padding-bottom: 6rem;
-    // }
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
   }
 
   &--py {
