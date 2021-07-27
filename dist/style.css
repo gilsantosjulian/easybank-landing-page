@@ -571,10 +571,10 @@ button:hover, .button:hover {
 }
 
 @media (min-width: 64em) {
-  .footer {
+  .footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 2fr;
-    grid-template-rows: repeat(2, 2fr);
+    grid-template-rows: 1fr auto;
     grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
     justify-items: start;
   }
@@ -615,6 +615,7 @@ button:hover, .button:hover {
 
 .footer__social a {
   display: inline-block;
+  height: 1.25rem;
 }
 
 .footer__social a:not(:last-child) {
@@ -626,10 +627,12 @@ button:hover, .button:hover {
   flex-direction: column;
   align-items: center;
   line-height: 2.25;
+  font-size: 0.9375rem;
 }
 
 @media (min-width: 64em) {
   .footer__links {
+    justify-content: space-between;
     align-items: start;
   }
 }
@@ -652,6 +655,10 @@ button:hover, .button:hover {
   }
 }
 
+.footer a {
+  line-height: 2.25;
+}
+
 @media (min-width: 64em) {
   .footer__cta {
     grid-area: cta;
@@ -664,6 +671,11 @@ button:hover, .button:hover {
   .footer__cta a.button {
     margin-bottom: 1.875rem;
   }
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: #9698a6;
 }
 
 @media (min-width: 64em) {
